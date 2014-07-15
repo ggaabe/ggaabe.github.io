@@ -1,5 +1,11 @@
 <!DOCTYPE html>
+<!--
+	Author: Gabriel Garrett
+	Contact: ggaabe@gmail.com
+	Github: ggaabe.github.io
+-->
 <html>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
 	<head>
 		<title>Koral Osman</title>
 		<link rel="stylesheet" type="text/css" href="stylesheet.css">
@@ -20,25 +26,70 @@
 			</h3>
 		</header>
 
-		<div class="pay"><form action="/charge" method="POST" >
+		<div class="video">
+			<iframe width="560" height="315" src="http://www.youtube.com/embed/K57dVZ4oHtQ?rel=0" frameborder="0" allowfullscreen></iframe>
+		</div>
+		<div class="pay">
+			<form action="/charge" method="POST">
+				<script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="pk_test_6pRNASCoBOKtIshFeQd4XMUh" data-image="/square-image.png" data-name="Demo Site" data-description="2 widgets ($20.00)" data-amount="2000">
+ 				</script>
 
- <script
+			</form>
+		</div>
+		<h3 class="entice">Your relaxation solution is just one click away.</h3>
 
- src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+	<!--<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'></script>
+	<script>
+$(function() {
 
- data-key="pk_test_6pRNASCoBOKtIshFeQd4XMUh"
+	// Find all YouTube videos
+	var $allVideos = $("iframe[src^='http://www.youtube.com']"),
 
- data-image="/square-image.png"
+	    // The element that is fluid width
+	    $fluidEl = $("body");
+	   // if ($fluedEl.width() < this.width)
+	// Figure out and save aspect ratio for each video
+	$allVideos.each(function() {
 
- data-name="Demo Site"
+		$(this)
+			.data('aspectRatio', this.height / this.width)
+			
+			// and remove the hard coded width/height
+			
+			.removeAttr('height')
+			.removeAttr('width');
+		
+	});
 
- data-description="2 widgets ($20.00)"
+	// When the window is resized
+	// (You'll probably want to debounce this)
+	$(window).resize(function() {
 
- data-amount="2000">
+		var newWidth = $fluidEl.width();
 
- </script>
+		if (newWidth < storedWidth){
+		
+		// Resize all videos according to their own aspect ratio
+		$allVideos.each(function() {
 
-</form>
-</div>
+			var $el = $(this);
+			$el
+				.width(newWidth)
+				.height(newWidth * $el.data('aspectRatio'));
+
+		});
+	}
+
+	// Kick off one resize to fix all videos on page load
+	}).resize();
+});
+	</script>-->
+
+	<footer>
+		<div class="cards"><img src="images/cardicons.png"></div>
+		<div class="privacy"><a href>Privacy Policy</a> | 
+			<a href>Customer Support</a></div>
+		<!--<div class="support"><div>-->
+	</footer>
 	</body>
 </html>

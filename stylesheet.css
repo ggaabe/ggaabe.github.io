@@ -1,8 +1,67 @@
-@media only screen and (min-device-width: 1px) and (max-device-width: 767px) {
-	body{
+@media screen and (max-width: 767px) {
+	
+	html {
+		height: 100%;
+		min-height: 100%;
 		background: url('images/backgroundmobile.png');
-		background-size: cover !important;
+		background-size: 1024px 1200px;
+		background-position: center center;
+		background-attachment: scroll;
+		background-position: center;
+		background-repeat:no-repeat;
 	}
+
+	body{
+		margin-bottom: 0;
+		height: 100%;
+		min-height: 100%;
+		/*overflow: hidden;*/
+	}
+
+	/*iframe{
+		width: 100%;
+	}*/
+
+	.video {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; 
+    height: 0; 
+    overflow: hidden;
+}
+.video iframe,
+.video object,
+.video embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+	}
+
+	footer{
+		width: 100%;
+	}
+
+	footer div{
+	text-align: center;
+	margin: 0 auto;
+	width: 80%;
+	display: block;
+		}
+
+	div.privacy a{
+		color: white;
+		text-decoration: none;
+	}
+
+	div.cards img{
+	margin: 0 auto;
+	height: 3em;
+	width: 17em;
+	}
+
+
 }
 
 @font-face{
@@ -21,10 +80,61 @@
 	font-style:normal;
 }
 
-body {
+html {
+	height: 100%;
+	min-height: 100%;
+}
+
+body{
+		padding: 0;
+		margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+	html {
 	background: url('images/background.jpg');
 	background-size: cover !important;
+	background-position: center;
 	background-repeat: no-repeat;
+		height: 100%;
+		min-height: 100%;
+	}
+
+	body {
+	min-height: 100%;
+	/*overflow: hidden;
+	padding-top: 1em;*/
+	}
+
+	/*iframe{
+	width:60%;
+	}*/
+
+	footer div{
+	text-align: center;
+	margin: 0 auto;
+	width: 80%;
+	display: block;
+	}
+
+	div.cards img{
+	width: 80%;
+	display: block;
+	margin: 0 auto;
+	height: 3em;
+	width: 17em;
+	}
+}
+
+@media screen and (min-height: 655px) {
+		body {
+	background: url('images/background.jpg');
+	background-size: cover !important;
+	background-position: center;
+	background-repeat: no-repeat;
+	min-height: 100%;
+	/*overflow: hidden;*/
+	}
 }
 
 header {
@@ -43,8 +153,36 @@ header h3{
 }
 
 div.pay {
+	padding-top: 1em;
 	width: 10em;
-	padding-left: 1em;
+	padding-left: 3em;
 	display: block;
 	margin: 0 auto;
 }
+
+h3.entice{
+	text-align: center;
+	color: white;
+	font-weight: bold;
+	font-family: Shift;
+	text-shadow: 0 -10px 3px rgba(0, 0, 0, 0.6);
+}
+
+iframe{
+	display: block;
+	margin: 0 auto;
+}
+
+footer{
+	width: 100%;
+	/*display: inline-block;*/
+}
+
+	footer div a{
+		color: white;
+		text-decoration: none;
+	}
+
+	footer div{
+		color: white;
+	}
