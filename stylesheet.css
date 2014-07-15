@@ -6,7 +6,7 @@
 		background: url('images/backgroundmobile.png');
 		background-size: 1024px 1200px;
 		background-position: center center;
-		background-attachment: scroll;
+		background-attachment: fixed;
 		background-position: center;
 		background-repeat:no-repeat;
 	}
