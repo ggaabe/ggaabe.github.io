@@ -137,6 +137,10 @@ body{
 	}
 }
 
+body{
+	margin-top: -1em;
+}
+
 header {
 	text-align: center;
 }
