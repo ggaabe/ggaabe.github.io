@@ -189,3 +189,42 @@ footer{
 	footer div{
 		color: white;
 	}
+
+div.steps{
+	/*margin: 0 auto;*/
+	height: auto;
+	width: 100%;
+	/*background: green;*/
+	text-align: center;
+}
+
+div.step{
+	display: inline-table;
+	margin: 0 auto;
+	width: 15em;
+	height: 9em;
+	background: lightgrey;
+	text-align: center;
+	margin-bottom: 1em;
+}
+
+#one{
+	color: red;
+	margin-left: 0;
+}
+
+#two{
+	color: orange;
+}
+
+#three{
+	color: green;
+}
+
+div.step h3{
+	border-bottom: groove 1px grey;
+}
+
+div.step i{
+	font-size: 2em;
+}

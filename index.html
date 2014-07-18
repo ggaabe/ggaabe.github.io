@@ -9,6 +9,7 @@
 	<head>
 		<title>Koral Osman</title>
 		<link rel="stylesheet" type="text/css" href="stylesheet.css">
+		<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 	</head>
 
 	<body>
@@ -43,52 +44,26 @@
 			</form>
 		</div>
 
-	<!--<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'></script>
-	<script>
-$(function() {
+	</script>
 
-	// Find all YouTube videos
-	var $allVideos = $("iframe[src^='http://www.youtube.com']"),
+	<div class="steps">
+		<div class="step" id="one">
+			<h3>Step 1</h3>
+			<p>Click 'Pay with Card'</p>
+			<i class="fa fa-hand-o-up"></i>
 
-	    // The element that is fluid width
-	    $fluidEl = $("body");
-	   // if ($fluedEl.width() < this.width)
-	// Figure out and save aspect ratio for each video
-	$allVideos.each(function() {
-
-		$(this)
-			.data('aspectRatio', this.height / this.width)
-			
-			// and remove the hard coded width/height
-			
-			.removeAttr('height')
-			.removeAttr('width');
-		
-	});
-
-	// When the window is resized
-	// (You'll probably want to debounce this)
-	$(window).resize(function() {
-
-		var newWidth = $fluidEl.width();
-
-		if (newWidth < storedWidth){
-		
-		// Resize all videos according to their own aspect ratio
-		$allVideos.each(function() {
-
-			var $el = $(this);
-			$el
-				.width(newWidth)
-				.height(newWidth * $el.data('aspectRatio'));
-
-		});
-	}
-
-	// Kick off one resize to fix all videos on page load
-	}).resize();
-});
-	</script>-->
+		</div>
+		<div class="step" id="two">
+			<h3>Step 2</h3>
+			<p>Fill out your information</p>
+			<i class="fa fa-keyboard-o"></i>
+		</div>
+		<div class="step" id="three">
+			<h3>Step 3</h3>
+			<p>Click Pay and your item is purchased!</p>
+			<i class="fa fa-check"></i>
+		</div>
+	</div>
 
 	<footer>
 		<div class="cards"><img src="images/cardicons.png"></div>
