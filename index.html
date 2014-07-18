@@ -4,7 +4,7 @@
 	Contact: ggaabe@gmail.com
 	Github: ggaabe.github.io
 -->
-<html>
+<html ng-app="store">
  <meta name="viewport" content="width=device-width, initial-scale=1">
 	<head>
 		<title>Koral Osman</title>
@@ -12,7 +12,7 @@
 		<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 	</head>
 
-	<body>
+	<body ng-controller="StoreController as store">
 		<header>
 			<h1>
 				Welcome to (XXXXX) Box
@@ -47,29 +47,53 @@
 	</script>
 
 	<div class="steps">
-		<div class="step" id="one">
+		<div class="step bubble-top" id="one">
 			<h3>Step 1</h3>
 			<p>Click 'Pay with Card'</p>
 			<i class="fa fa-hand-o-up"></i>
 
 		</div>
-		<div class="step" id="two">
+		<div class="step bubble-top" id="two">
 			<h3>Step 2</h3>
 			<p>Fill out your information</p>
 			<i class="fa fa-keyboard-o"></i>
 		</div>
-		<div class="step" id="three">
+		<div class="step bubble-top" id="three">
 			<h3>Step 3</h3>
 			<p>Click Pay and your item is purchased!</p>
-			<i class="fa fa-check"></i>
+			<i class="fa fa-check-circle"></i>
 		</div>
 	</div>
 
-	<footer>
-		<div class="cards"><img src="images/cardicons.png"></div>
+	<footer ng-init="tab = 0">
+		<div class="cards">
+			<img src="images/cardicons.png">
+		</div>
+		
 		<div class="privacy"><a href>Privacy Policy</a> | 
-			<a href>Customer Support</a></div>
-		<!--<div class="support"><div>-->
+			<a href ng-click="tab = 1" ng-class="{active: tab === 1}" ng-show="tab===0">Customer Support</a>
+			<a href ng-click="tab = 0" ng-class="{active: tab === 0}" ng-show="tab===1">Customer Support</a>
+		</div>
+
+		<div ng-show="tab===1" class="contactinfo">
+			<a href ng-click="tab=0">
+				<i ng-click="tab=0" class="fa fa-times-circle"></i>
+			</a>
+			<h3>Customer Support</h3>
+			<p><i class="fa fa-phone-square"></i>Phone: 555-555-5555</p>
+			<p><i class="fa fa-envelope-square"></i>Email: email@email.com</p>
+		</div>
+
+		<div class="socialmedia">
+			<i class="fa fa-facebook-square"></i>
+			<i class="fa fa-twitter-square"></i>
+			<i class="fa fa-instagram"></i>
+			<i class="fa fa-google-plus-square"></i>
+		</div>
+
 	</footer>
+
+	<script type="text/javascript" src="angular.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
 	</body>
 </html>
