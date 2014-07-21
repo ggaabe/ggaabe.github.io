@@ -1,6 +1,7 @@
 @media screen and (max-width: 320px) {
 	div.socialmedia a.supportphone, div.socialmedia a.supportemail{
 		margin-left: -1.5em;
+		padding-right: 1em;
 	}
 }	
 
@@ -401,7 +402,7 @@ div.socialmedia a.supportphone, div.socialmedia a.supportemail{
 	padding-right: .7em;
 }
 
- a.supportemail{
+ a.supportphone{
  	margin-top: -1em;
 }
 
