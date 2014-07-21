@@ -1,3 +1,22 @@
+@media screen and (max-width: 320px) {
+	div.socialmedia a.supportphone, div.socialmedia a.supportemail{
+		margin-left: -1em;
+	}
+}	
+
+/*@media (orientation: landscape) {
+	footer,div.steps{
+		background: url('images/footerbackground.png');
+	}
+ }
+ */
+
+/*@media screen and (max-aspect-ratio: 768/655){
+	footer,div.steps{
+		background: url('images/footerbackground.png');
+	}
+}*/
+
 @media screen and (max-width: 767px) {
 	
 	html {
@@ -28,7 +47,7 @@
     padding-top: 30px; 
     height: 0; 
     overflow: hidden;
-}
+	}
 .video iframe,
 .video object,
 .video embed {
@@ -61,7 +80,22 @@
 	width: 17em;
 	}
 
+	div.socialmedia{
+	/*begin header transformation*/
+	text-align: right;
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding-right: 1em;
+	}
 
+	header {
+		padding-top: 1.8em;
+	}
+
+	div.socialmedia a.supportphone, div.socialmedia a.supportemail{
+	padding-right: 1em;
+	}
 }
 
 @font-face{
@@ -106,6 +140,10 @@ body{
 	padding-top: 1em;*/
 	}
 
+	header{
+		padding-top: 1.5em;
+	}
+
 	/*iframe{
 	width:60%;
 	}*/
@@ -123,6 +161,17 @@ body{
 	margin: 0 auto;
 	height: 3em;
 	width: 17em;
+	}
+
+	div.socialmedia{
+	/*begin header transformation*/
+	width: 93%;
+	text-align: right;
+	position: absolute;
+	top: 0;
+	right: 0;
+	clear: both;
+	padding-right: 1em;
 	}
 }
 
@@ -209,7 +258,8 @@ div.steps{
 }
 
 div.step{
-	background: url('images/greybg.jpg');
+	border: 2px solid white;
+	/*background: url('images/greybg.jpg');*/
 	font-family: Shift;
 	display: inline-table;
 	margin: 0 auto;
@@ -222,17 +272,20 @@ div.step{
 
 #one{
 	height: 9.3em;
-	color: red;
+	/*color: red;*/
+	color: white;
 	margin-left: 0;
 }
 
 #two{
-	color: orange;
+	/*color: orange;*/
+	color: white;
 	height: 9.3em;
 }
 
 #three{
-	color: green;
+	/*color: green;*/
+	color: white;
 }
 
 div.step h3{
@@ -290,15 +343,25 @@ text-decoration: none;
 
 div.contactinfo{
 	font-family: Shift;
-	background: url('images/greybg.jpg');
+	/*background: url('images/greybg.jpg');*/
 	color: black;
-	width: 10em;
-	height: 10em;
+	height: 1em;
 	text-decoration: none;
+	top: 0;
+	width: 20%;
+	clear: both;
+	position: absolute;
+	float: left;
 }
 
-div.contactinfo a{
-	color: blue;
+div.contactinfo p{
+	margin-top: -1em;
+	color: white;
+	position: absolute;
+	top: 0;
+	left: 0;
+	float: left;
+	font-size: .8em;
 }
 
 div.contactinfo i.fa-times-circle{
@@ -311,7 +374,42 @@ div.contactinfo i.fa-times-circle{
 	right: 0;
 }
 
+/*
 div.contactinfo i.fa-phone-square, div.contactinfo i.fa-envelope-square{
+	padding-top: 1em;
 	font-size: 1.2em;
 	padding-right: .5em;
+}
+*/
+
+div.contactinfo{
+	float: left;
+	text-align: left;
+	width: 50em;
+	position: absolute;
+}
+
+div.socialmedia a.supportphone, div.socialmedia a.supportemail{
+	position: absolute;
+	clear: both;
+	top: 0;
+	left: 0;
+	text-align: left;
+	display: inline;
+	padding-top: 1em;
+	font-size: .5em;
+	padding-right: .7em;
+}
+
+ a.supportemail{
+ 	margin-top: -1em;
+}
+
+div.contactinfo a.supportphone{
+	padding-left: 0em;
+}
+
+
+div.contactinfo i.fa-phone-square{
+	padding-left: 2em;
 }

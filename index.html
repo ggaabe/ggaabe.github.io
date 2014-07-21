@@ -13,14 +13,10 @@
 	</head>
 
 	<body ng-controller="StoreController as store">
-		<header>
+		<header ng-init="tab = 0">
 			<h1>
 				Welcome to (XXXXX) Box
 			</h1>
-
-			<!--<h2>
-				A membership box professionally curated monthly to help you unwind from life's daily stresses.
-			</h2>-->
 
 			<h3>
 				A membership box professionally curated monthly to help you unwind from life's daily stresses.
@@ -65,35 +61,48 @@
 		</div>
 	</div>
 
-	<footer ng-init="tab = 0">
+	<footer>
 		<div class="cards">
 			<img src="images/cardicons.png">
 		</div>
 		
-		<div class="privacy"><a href>Privacy Policy</a> | 
-			<a href ng-click="tab = 1" ng-class="{active: tab === 1}" ng-show="tab===0">Customer Support</a>
-			<a href ng-click="tab = 0" ng-class="{active: tab === 0}" ng-show="tab===1">Customer Support</a>
+		<div class="privacy"><a href>Privacy Policy</a>
+			<!--<a href ng-click="tab = 1" ng-class="{active: tab === 1}" ng-show="tab===0">Customer Support</a>
+			<a href ng-click="tab = 0" ng-class="{active: tab === 0}" ng-show="tab===1">Customer Support</a>-->
 		</div>
 
-		<div ng-show="tab===1" class="contactinfo">
-			<a href ng-click="tab=0">
+		<!--<div class="contactinfo">
+			<!--<a href ng-click="tab=0">
 				<i ng-click="tab=0" class="fa fa-times-circle"></i>
-			</a>
-			<h3>Customer Support</h3>
-			<p><i class="fa fa-phone-square"></i>Phone: 555-555-5555</p>
-			<p><i class="fa fa-envelope-square"></i>Email: email@email.com</p>
-		</div>
+			</a>-->
+			<!--<h3>Customer Support</h3>-->-->
+			<!--<a href ng-click="tab = 3" ng-show="tab===0"><p><i class="fa fa-phone-square"></i></p>
+			<a href ng-click="tab = 0" ng-show="tab===3"><p><i class="fa fa-phone-square"></i><p>Phone: 555-555-5555</p></p>
+			<a href ng-click="tab = 4" ng-show="tab===0"><p><i class="fa fa-envelope-square"></i></p>
+			<a href ng-click="tab = 0" ng-show="tab===4"><p><i class="fa fa-envelope-square"></i><p>Email: email@email.com</p></p>
+
+		</div>-->
 
 		<div class="socialmedia">
-			<i class="fa fa-facebook-square"></i>
+			<a href=""><i class="fa fa-facebook-square"></i></a>
 			<i class="fa fa-twitter-square"></i>
 			<i class="fa fa-instagram"></i>
-			<i class="fa fa-google-plus-square"></i>
+			<!--<i class="fa fa-google-plus-square"></i>-->
+
+			<!--<div class="contactinfo">-->
+			<!--<a href ng-click="tab=0">
+				<i ng-click="tab=0" class="fa fa-times-circle"></i>
+			</a>-->
+			<!--<h3>Customer Support</h3>-->
+			<a href class="supportphone" ng-click="tab = 0"><!--<i class="fa fa-phone-square">-->Phone: 555-555-5555</a>
+			<a href class="supportemail" ng-click="tab = 0"><!--<i class="fa fa-envelope-square">-->Email: email@email.com</a>
+
+			<!--</div>-->
 		</div>
 
 	</footer>
 
-	<script type="text/javascript" src="angular.min.js"></script>
-	<script type="text/javascript" src="app.js"></script>
+	<!--<script type="text/javascript" src="angular.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>-->
 	</body>
 </html>
