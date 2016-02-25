@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en" class=" js csstransforms3d"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  
+  <!-- disable zooming -->
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=0">
+  
+  <!--<title>Cube 2 - show sides · Intro to CSS 3D transforms › Examples</title>-->
+  
+  <link rel="stylesheet" href="./cube_files/style.css" media="screen">
+
+
+    <style media="screen">
+
+    .container {
+      width: 100%;
+      height: 100vh;
+      position: relative;
+      margin: 0 auto;
+      border: 1px solid #CCC;
+      -webkit-perspective: 1000px;
+         -moz-perspective: 1000px;
+           -o-perspective: 1000px;
+              perspective: 1000px;
+    }
+
+    #cube {
+      width: 100%;
+      height: 100vh;
+      position: absolute;
+      -webkit-transform-style: preserve-3d;
+         -moz-transform-style: preserve-3d;
+           -o-transform-style: preserve-3d;
+              transform-style: preserve-3d;
+      -webkit-transition: -webkit-transform 1s;
+         -moz-transition: -moz-transform 1s;
+           -o-transition: -o-transform 1s;
+              transition: transform 1s;
+    }
+
+    #cube figure {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border: 2px solid black;
+      line-height: 30px;
+      font-size: 20px;
+      font-weight: bold;
+      color: white;
+      text-align: center;
+    }
+
+    #cube.panels-backface-invisible figure {
+      -webkit-backface-visibility: hidden;
+         -moz-backface-visibility: hidden;
+           -o-backface-visibility: hidden;
+              backface-visibility: hidden;
+    }
+
+
+
+    #cube .front  { background: hsla(   0, 100%, 50%, 0.7 ); }
+    #cube .back   { background: hsla(  60, 100%, 50%, 0.7 ); }
+    #cube .right  { background: hsla( 120, 100%, 50%, 0.7 ); }
+    #cube .left   { background: hsla( 180, 100%, 50%, 0.7 ); }
+    #cube .top    { background: hsla( 240, 100%, 50%, 0.7 ); }
+    #cube .bottom { background: hsla( 300, 100%, 50%, 0.7 ); }
+
+    #cube .front  {
+      -webkit-transform: translateZ( 100px );
+         -moz-transform: translateZ( 100px );
+           -o-transform: translateZ( 100px );
+              transform: translateZ( 100px );
+    }
+    #cube .back   {
+      -webkit-transform: rotateX( -180deg ) translateZ( 100px );
+         -moz-transform: rotateX( -180deg ) translateZ( 100px );
+           -o-transform: rotateX( -180deg ) translateZ( 100px );
+              transform: rotateX( -180deg ) translateZ( 100px );
+    }
+    #cube .right {
+      -webkit-transform: rotateY(   90deg ) translateZ( 100px );
+         -moz-transform: rotateY(   90deg ) translateZ( 100px );
+           -o-transform: rotateY(   90deg ) translateZ( 100px );
+              transform: rotateY(   90deg ) translateZ( 100px );
+    }
+    #cube .left {
+      -webkit-transform: rotateY(  -90deg ) translateZ( 100px );
+         -moz-transform: rotateY(  -90deg ) translateZ( 100px );
+           -o-transform: rotateY(  -90deg ) translateZ( 100px );
+              transform: rotateY(  -90deg ) translateZ( 100px );
+    }
+    #cube .top {
+      -webkit-transform: rotateX(   90deg ) translateZ( 100px );
+         -moz-transform: rotateX(   90deg ) translateZ( 100px );
+           -o-transform: rotateX(   90deg ) translateZ( 100px );
+              transform: rotateX(   90deg ) translateZ( 100px );
+    }
+    #cube .bottom {
+      -webkit-transform: rotateX(  -90deg ) translateZ( 100px );
+         -moz-transform: rotateX(  -90deg ) translateZ( 100px );
+           -o-transform: rotateX(  -90deg ) translateZ( 100px );
+              transform: rotateX(  -90deg ) translateZ( 100px );
+    }
+
+    #cube.show-front {
+      -webkit-transform: translateZ( -100px );
+         -moz-transform: translateZ( -100px );
+           -o-transform: translateZ( -100px );
+              transform: translateZ( -100px );
+    }
+    #cube.show-back {
+      -webkit-transform: translateZ( -100px ) rotateX( -180deg );
+         -moz-transform: translateZ( -100px ) rotateX( -180deg );
+           -o-transform: translateZ( -100px ) rotateX( -180deg );
+              transform: translateZ( -100px ) rotateX( -180deg );
+    }
+    #cube.show-right {
+      -webkit-transform: translateZ( -100px ) rotateY(  -90deg );
+         -moz-transform: translateZ( -100px ) rotateY(  -90deg );
+           -o-transform: translateZ( -100px ) rotateY(  -90deg );
+              transform: translateZ( -100px ) rotateY(  -90deg );
+    }
+    #cube.show-left {
+      -webkit-transform: translateZ( -100px ) rotateY(   90deg );
+         -moz-transform: translateZ( -100px ) rotateY(   90deg );
+           -o-transform: translateZ( -100px ) rotateY(   90deg );
+              transform: translateZ( -100px ) rotateY(   90deg );
+    }
+    #cube.show-top {
+      -webkit-transform: translateZ( -100px ) rotateX(  -90deg );
+         -moz-transform: translateZ( -100px ) rotateX(  -90deg );
+           -o-transform: translateZ( -100px ) rotateX(  -90deg );
+              transform: translateZ( -100px ) rotateX(  -90deg );
+    }
+    #cube.show-bottom {
+      -webkit-transform: translateZ( -100px ) rotateX(   90deg );
+         -moz-transform: translateZ( -100px ) rotateX(   90deg );
+           -o-transform: translateZ( -100px ) rotateX(   90deg );
+              transform: translateZ( -100px ) rotateX(   90deg );
+    }
+
+  </style>
+
+</head>
+<body>
+
+  <!--<h1>Cube 2 - show sides</h1>-->
+
+  <section class="container" id="show-buttons">
+    <div id="cube" class="panels-backface-invisible show-top">
+      <figure class="front">5 
+      <button class="show-top topArrow">Show Top</button>
+      <button class="show-left leftArrow">Show Left</button>
+      <button class="show-right rightArrow">Show Right</button>
+      <button class="show-bottom bottomArrow">Show Bottom</button>
+
+      </figure>
+      <figure class="back">2
+      <button class="show-bottom topArrow">Show Bottom</button>
+      <button class="show-right leftArrow">Show Right</button>
+      <button class="show-left rightArrow">Show Left</button>
+      <button class="show-top bottomArrow">Show Top</button>
+      </figure>
+      <figure class="right">
+      <button class="show-top topArrow">Show Top</button>
+      <button class="show-front leftArrow">Show Front</button>
+      <button class="show-back rightArrow">Show Back</button>
+      <button class="show-bottom bottomArrow">Show Bottom</button>
+        3
+      </figure>
+      <figure class="left">
+      <button class="show-top topArrow">Show Top</button>
+      <button class="show-front rightArrow">Show Front</button>
+      <button class="show-back leftArrow">Show Back</button>
+      <button class="show-bottom bottomArrow">Show Bottom</button>
+      4
+      <h1> Gabriel Garrett </h1>
+      <button class="show-bottom bottomArrow">Show 4</button>
+      </figure>
+      <figure class="top">1
+      <button class="show-back">Show Back</button>
+      <button class="show-left leftArrow">Show Left</button>
+      <button class="show-right rightArrow">Show Right</button>
+      <button class="show-front bottomArrow">Show Front</button>
+
+
+      </figure>
+      <figure class="bottom">
+      <button class="show-front topArrow">Show Front</button>
+      <button class="show-left leftArrow">Show Left</button>
+      <button class="show-right rightArrow">Show Right</button>
+      <button class="show-back bottomArrow">Show Back</button>
+      6</figure>
+    </div>
+  </section>
+
+  <section id="options">
+
+    <!--<p id="show-buttons">
+      <button class="show-front">Show 1</button>
+      <button class="show-back">Show 2</button>
+      <button class="show-right">Show 3</button>
+      <button class="show-left">Show 4</button>
+      <button class="show-top">Show 5</button>
+      <button class="show-bottom">Show 6</button>
+      And you completely ignored again that her coworkers are in a similar situation and that there are people throughout the bay area in that situation as well, and yet her own poor decisions somehow also justifies inaction to help those people as well. Also ignored again is the concept of thousands of 
+    </p>-->
+
+    <p>
+      <button id="toggle-backface-visibility">Toggle Backface Visibility</button>
+    </p>
+
+
+  </section>
+
+  <script src="./cube_files/utils.js"></script>
+  <script src="./cube_files/rotate-box.js"></script>
+
+
+  <p id="disclaimer">Sorry, your browser does not support CSS 3D transforms. This example may be broken.</p>
+
+
+
+
+
+<div id="point-jawn" style="z-index: 2147483647;"></div></body></html>
