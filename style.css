@@ -1,11 +1,14 @@
-div{
+body{
+  width: 100%;
+  height: 100vh;
+  width: 100vw;
   background: turquoise;
-  width: 100px;
-  height: 100px;
+  /*width: 100px;
+  height: 100px;*/
 }
-
+/*
 div:hover {
-    -webkit-transform: rotateX(150deg); /* Safari */
+    -webkit-transform: rotateX(150deg); 
     transform: rotateX(150deg);
 }
 
@@ -25,8 +28,7 @@ div:hover {
 
 #cube figure {
   margin: 0;
-  width: 196px;
-  height: 196px;
+
   display: block;
   position: absolute;
   border: 2px solid black;
@@ -39,4 +41,4 @@ div:hover {
 #cube.show-top    { transform: translateZ( -100px ) rotateX(  -90deg ); }
 #cube.show-bottom { transform: translateZ( -100px ) rotateX(   90deg ); }
 
-#cube { transition: transform 1s; }
+#cube { transition: transform 1s; }*/

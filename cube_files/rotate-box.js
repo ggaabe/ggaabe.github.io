@@ -35,8 +35,8 @@ document.onkeydown = checkKey;
 
 var down = [3,2,4,6,5,1]; 
 var up = [6,2,1,3,5,4];
-var left = [2,4,3,5,1,6];
-var right = [5,1,3,2,4,6];
+var right = [2,4,3,5,1,6];
+var left = [5,1,3,2,4,6];
 
 var panelNamesArray = ["show-top", "show-back", "show-left", "show-bottom", "show-front", "show-right"];
 
