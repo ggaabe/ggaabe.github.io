@@ -233,12 +233,14 @@ body.doc { max-width: 900px; }
   border-radius: 3px;
 }
 
+.instructions{
+  width: 100%;
+  text-align: center;
+}
 
 .bottomArrow{
   position: absolute;
   bottom: 10%;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .leftArrow{
