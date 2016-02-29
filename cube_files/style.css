@@ -236,7 +236,7 @@ body.doc { max-width: 900px; }
 
 .bottomArrow{
   position: absolute;
-  bottom: 0;
+  bottom: 10%;
 }
 
 .leftArrow{
