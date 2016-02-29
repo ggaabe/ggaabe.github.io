@@ -233,6 +233,8 @@ body.doc { max-width: 900px; }
   border-radius: 3px;
 }
 
+body{overflow: hidden;}
+
 .instructions{
   width: 100%;
   text-align: center;
