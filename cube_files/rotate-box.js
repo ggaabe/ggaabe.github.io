@@ -12,6 +12,8 @@ var init = function() {
         var panelClassName = classes[1];
         console.log("Current class: " + panelClassName);
 
+      
+
         panelClassName = panelNamesArray[startArray[0]-1];
         classes[1] = panelClassName;
         box.className = classes.join(" ");
@@ -25,9 +27,9 @@ var init = function() {
     showPanelButtons[i].addEventListener( 'click', onButtonClick, false);
   }
   
-  document.getElementById('toggle-backface-visibility').addEventListener( 'click', function(){
-    box.toggleClassName('panels-backface-invisible');
-  }, false);
+  // document.getElementById('toggle-backface-visibility').addEventListener( 'click', function(){
+  //   box.toggleClassName('panels-backface-invisible');
+  // }, false);
   
 };
 
@@ -104,5 +106,30 @@ function checkKey(e) {
     }
 
 }
-  
+var box = document.querySelector('.container').children[0];
+var hammertime = new Hammer(box, checkKey);
+hammertime.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
+
+hammertime.on('swipeup', function(ev) {
+        console.log(ev);
+        ev.keyCode = 38;
+        checkKey(ev);
+  });
+
+hammertime.on('swipedown', function(ev) {
+        console.log(ev);
+        ev.keyCode = 40;
+        checkKey(ev);
+  });
+hammertime.on('swipeleft', function(ev) {
+        console.log(ev);
+        ev.keyCode = 37;
+        checkKey(ev);
+  });
+hammertime.on('swiperight', function(ev) {
+        console.log(ev);
+        ev.keyCode = 39;
+        checkKey(ev);
+  });
+
 window.addEventListener( 'DOMContentLoaded', init, false);
