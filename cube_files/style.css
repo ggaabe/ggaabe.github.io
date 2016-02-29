@@ -258,6 +258,21 @@ body.doc { max-width: 900px; }
   top: 0;
 }
 
+#me{
+  height: 0vh;
+  visibility: hidden;
+}
+
+@media screen and (min-width: 480px) {
+  
+  #me{
+  width: 17vw;
+  height: 50vh;
+  visibility: visible;
+}
+
+}
+
 h3{
   text-align: center;
 }
