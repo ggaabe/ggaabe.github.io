@@ -237,6 +237,8 @@ body.doc { max-width: 900px; }
 .bottomArrow{
   position: absolute;
   bottom: 10%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .leftArrow{
@@ -253,6 +255,10 @@ body.doc { max-width: 900px; }
   position: absolute;
   top: 0;
 }
+
+h3{
+  text-align: center;
+}
 /******* Pygments *******/
 
 ul{
@@ -261,6 +267,7 @@ ul{
 
 a{
   color: white;
+  text-decoration: underline;
 }
 
 pre {
