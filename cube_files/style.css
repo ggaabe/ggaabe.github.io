@@ -255,7 +255,13 @@ body.doc { max-width: 900px; }
 }
 /******* Pygments *******/
 
+ul{
+  list-style: none;
+}
 
+a{
+  color: white;
+}
 
 pre {
   background: #111;
