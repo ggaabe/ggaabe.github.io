@@ -68,7 +68,7 @@ function checkKey(e) {
 
     if (e.keyCode == '37' /*38*/) {
         // up arrow
-        console.log("up");
+        console.log("left arrow");
         for(var i = 0; i < up.length; i++){
           tempArray[i] =  startArray[up[i] - 1];
         }
@@ -77,7 +77,7 @@ function checkKey(e) {
     }
     else if (e.keyCode == '39' /*40*/) {
         // down arrow
-        console.log("down");
+        console.log("right arrow");
         for(var i = 0; i < down.length; i++){
           tempArray[i] =  startArray[down[i] - 1];
         }
@@ -86,7 +86,7 @@ function checkKey(e) {
     }
     else if (e.keyCode == '38' /*37*/) {
        // left arrow
-       console.log("left");
+       console.log("up arrow");
        var tempArray = [];
         for(var i = 0; i < left.length; i++){
           tempArray[i] =  startArray[left[i] - 1];
@@ -96,7 +96,7 @@ function checkKey(e) {
     }
     else if (e.keyCode == '40' /*39*/) {
        // right arrow
-       console.log("right");
+       console.log("down arrow");
        var tempArray = [];
         for(var i = 0; i < right.length; i++){
           tempArray[i] =  startArray[right[i] - 1];
