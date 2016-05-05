@@ -35,10 +35,10 @@ var init = function() {
 
 document.onkeydown = checkKey;
 
-var down = [3,2,4,6,5,1]; 
-var up = [6,2,1,3,5,4];
-var right = [2,4,3,5,1,6];
-var left = [5,1,3,2,4,6];
+var right = [3,2,4,6,5,1]; 
+var left = [6,2,1,3,5,4];
+var down = [2,4,3,5,1,6];
+var up = [5,1,3,2,4,6];
 
 var panelNamesArray = ["show-top", "show-back", "show-left", "show-bottom", "show-front", "show-right"];
 
@@ -46,6 +46,41 @@ function mutableCube(cubeArray){
 
 }
 
+
+var leftArrow = 37,
+rightArrow = 39,
+upArrow = 38,
+downArrow = 40;
+
+function handleOrientation(panelName){
+/*  if (panelName == "show-left"){
+    console.log("3");
+    leftArrow = 40;
+    rightArrow = 38;
+    upArrow = 37;
+    downArrow = 39;
+  }
+  else if(panelName == "show-right"){
+    console.log("6");
+    leftArrow = 38;
+    rightArrow = 40;
+    upArrow = 39;
+    downArrow = 37;
+  }
+  /*else if(panelName == "show-front"){
+    console.log("5");
+    leftArrow = 37;
+    rightArrow = 39;
+    upArrow = 38;
+    downArrow = 40;
+  }
+  else{
+    leftArrow = 37;
+    rightArrow = 39;
+    upArrow = 38;
+    downArrow = 40;
+  }*/
+}
 function checkKey(e) {
 
     e = e || window.event;
@@ -58,7 +93,9 @@ function checkKey(e) {
     var tempArray = [];
 
     function changeFace(){
+        console.log("Before: " + startArray);
         startArray = tempArray;
+        console.log("After: " + startArray);
         //box.removeClassName( panelClassName );
         panelClassName = panelNamesArray[startArray[0]-1];
         classes[1] = panelClassName;
@@ -66,42 +103,40 @@ function checkKey(e) {
         console.log(panelClassName);
       }
 
-    if (e.keyCode == '37' /*38*/) {
+
+    handleOrientation(panelClassName);
+    if (e.keyCode == leftArrow /*38*/) {
         // up arrow
         console.log("left arrow");
         for(var i = 0; i < up.length; i++){
-          tempArray[i] =  startArray[up[i] - 1];
+          tempArray[i] =  startArray[left[i] - 1];
         }
-        startArray = tempArray;
         changeFace();
     }
-    else if (e.keyCode == '39' /*40*/) {
+    else if (e.keyCode == rightArrow /*40*/) {
         // down arrow
         console.log("right arrow");
         for(var i = 0; i < down.length; i++){
-          tempArray[i] =  startArray[down[i] - 1];
+          tempArray[i] =  startArray[right[i] - 1];
         }
-        startArray = tempArray;
         changeFace();
     }
-    else if (e.keyCode == '38' /*37*/) {
+    else if (e.keyCode == upArrow /*37*/) {
        // left arrow
        console.log("up arrow");
        var tempArray = [];
         for(var i = 0; i < left.length; i++){
-          tempArray[i] =  startArray[left[i] - 1];
+          tempArray[i] =  startArray[up[i] - 1];
         }
-        startArray = tempArray;
         changeFace();
     }
-    else if (e.keyCode == '40' /*39*/) {
+    else if (e.keyCode == downArrow /*39*/) {
        // right arrow
        console.log("down arrow");
        var tempArray = [];
         for(var i = 0; i < right.length; i++){
-          tempArray[i] =  startArray[right[i] - 1];
+          tempArray[i] =  startArray[down[i] - 1];
         }
-        startArray = tempArray;
         changeFace();
     }
 
